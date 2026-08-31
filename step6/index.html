@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STEP 6 日運・月運を読む｜完全版 7STEPで学ぶ 宿曜占星術入門講座</title>
+<meta name="description" content="27宿・本命宿・相性六分類・日運をやさしく読み解き、鑑定文まで作る実践教材">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="bar">
+    <div class="logo">宿曜占星術 完全講座<small>7STEPでゼロから鑑定文まで</small></div>
+    <button class="nav-toggle" aria-label="メニュー">☰ 目次</button>
+    <nav class="site-nav">
+      <a href='/step1'>1.基本</a>
+      <a href='/step2'>2.27宿</a>
+      <a href='/step3'>3.本命宿</a>
+      <a href='/step4'>4.性格変換</a>
+      <a href='/step5'>5.相性</a>
+      <a href='/step6'>6.日運</a>
+      <a href='/step7'>7.鑑定文</a>
+      <a href='/appendix'>早見表</a>
+      <a href='/final'>最終課題</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="step" id="step6">
+  <div class="container">
+    <div class="step-head">
+      <span class="step-no">STEP 6</span>
+      <h2>日運・月運を読む</h2>
+      <p class="lead">本命宿と、見たい日の宿との関係から、その日の行動テーマを読み解きます。</p>
+    </div>
+
+    <div class="lecture">
+      <h3>日運は「良い日・悪い日」ではなく「使い方」</h3>
+      <p>日運は、本命宿から見て今日がどんな宿にあたるかによって、<span class="mark">11種類のテーマ</span>に分かれます。「壊の日だから悪い日」ではなく、<span class="mark2">「壊の日＝整理や見直しに向いている日」</span>というように、行動テーマとして読みます。</p>
+      <p>正確な日運を出すには「今日の宿」が必要ですが、これも月の運行データが関わるため、<span class="mark">宿曜カレンダーなどで確認した宿を手入力</span>していただく方式にしています。</p>
+      <a class='table-jump' href='/step6#table-day'>▶ 日運11種早見表にジャンプ</a>
+    </div>
+
+    <div class="svg-frame">
+      <div id="day-cycle-wheel" style="display:flex;justify-content:center;"></div>
+      <div class="cap">日運サイクル図：本命宿から見た距離によって、11種類の運気テーマが決まります。</div>
+    </div>
+
+    <div class="table-wrap" id="table-day">
+      <div class="table-title">📋 日運11種 早見表 <span class="badge">必須早見表 8</span></div>
+      <div class="table-scroll">
+        <table id="day-fortune-table" class="to-card wide">
+          <thead><tr><th>運気</th><th>テーマ</th><th>向いている行動</th><th>注意点</th><th>恋愛</th><th>仕事</th><th>鑑定文例</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="tool-box">
+      <h4>📅 日運チェックツール</h4>
+      <div class="form-row">
+        <div class="field"><label>本命宿</label><select id="day-honmei"></select></div>
+        <div class="field"><label>見たい日の宿（暦で確認のうえ入力）</label><select id="day-today"></select></div>
+      </div>
+      <button class="btn" id="day-submit">日運を調べる</button>
+      <div class="result-box" id="day-result"></div>
+    </div>
+
+    <div class="work-box">
+      <h4>ワークシート④：日運行動計画シート</h4>
+      <div class="field"><label>見たい日付</label><input type="date"></div>
+      <div class="field"><label>その日の運気</label><input type="text" placeholder="例：栄の日"></div>
+      <div class="field"><label>今日意識したい行動</label><textarea rows="3"></textarea></div>
+    </div>
+
+    <div class="check-box">
+      <h4>暗記チェック</h4>
+      <div class="check-list">
+        <label><input type="checkbox" data-key="s6-1"> 日運は「良い悪い」ではなく「行動テーマ」だと説明できる</label>
+        <label><input type="checkbox" data-key="s6-2"> 「壊の日」を優しく言い換えられる</label>
+        <label><input type="checkbox" data-key="s6-3"> 日運チェックツールを使ってみた</label>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="step-pager no-print" aria-label="STEPページ移動"><a class='btn ghost' href='/step5'>← 前のページへ</a><a class='btn' href='/step7'>このSTEPを終えて次へ →</a></nav>
+</main>
+<footer>
+  <div class="container">
+    <p>完全版 7STEPで学ぶ 宿曜占星術入門講座</p>
+    <p class="small-note">本教材は学習・自己理解・エンタメ目的の実践教材です。断定的な判断や医療・金銭・恋愛成就の保証は行いません。宿の分類・相性の計算方式は流派により異なる場合があります。js/data.js にて自由に編集・カスタマイズできます。</p>
+  </div>
+</footer>
+<div class="jump-fab no-print">
+  <div class="jump-menu" id="jump-menu">
+    <a href='/step2#table-basic'>① 27宿基本早見表</a>
+    <a href='/step2#shuku-card-grid'>27宿SVGカード</a>
+    <a href='/step3'>② 本命宿フォーム</a>
+    <a href='/step4#table-detail'>③④⑤ 27宿詳細早見表</a>
+    <a href='/step5#table-relation'>⑥ 相性六分類早見表</a>
+    <a href='/step5#matrix-section'>⑦ 相性マトリクス</a>
+    <a href='/step6#table-day'>⑧ 日運11種早見表</a>
+    <a href='/appendix#ng-section'>⑨⑩ NG表現集・言い換え辞典</a>
+    <a href='/final'>最終課題</a>
+  </div>
+  <button class="jump-fab-btn" id="jump-fab-btn">📊 早見表へジャンプ</button>
+</div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
