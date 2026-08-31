@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STEP 5 相性六分類を読む｜完全版 7STEPで学ぶ 宿曜占星術入門講座</title>
+<meta name="description" content="27宿・本命宿・相性六分類・日運をやさしく読み解き、鑑定文まで作る実践教材">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="bar">
+    <div class="logo">宿曜占星術 完全講座<small>7STEPでゼロから鑑定文まで</small></div>
+    <button class="nav-toggle" aria-label="メニュー">☰ 目次</button>
+    <nav class="site-nav">
+      <a href='/step1'>1.基本</a>
+      <a href='/step2'>2.27宿</a>
+      <a href='/step3'>3.本命宿</a>
+      <a href='/step4'>4.性格変換</a>
+      <a href='/step5'>5.相性</a>
+      <a href='/step6'>6.日運</a>
+      <a href='/step7'>7.鑑定文</a>
+      <a href='/appendix'>早見表</a>
+      <a href='/final'>最終課題</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="step" id="step5">
+  <div class="container">
+    <div class="step-head">
+      <span class="step-no">STEP 5</span>
+      <h2>相性六分類を読む</h2>
+      <p class="lead">2人の宿の位置関係から、6種類の関係性のタイプを読み解きます。良い・悪いでは判断しません。</p>
+    </div>
+
+    <div class="lecture">
+      <h3>相性六分類とは</h3>
+      <p>宿曜占星術の相性は、27宿を円のように並べたときの<span class="mark">「距離」</span>によって6つのタイプに分類されます。<span class="mark2">命・業胎・栄親・友衰・安壊・危成</span>の6つです。</p>
+      <p>どのタイプも「良い相性」「悪い相性」という単純なものではなく、<span class="mark">それぞれ違った関わり方の特徴</span>を持っています。特に「安壊」は名前から不安を感じやすいですが、「揺さぶられやすい関係だからこそ、距離感を大切にする」という前向きな捉え方をしましょう。</p>
+      <a class='table-jump' href='/step5#table-relation'>▶ 相性六分類の早見表にジャンプ</a>
+      <a class='table-jump' href='/step5#matrix-section'>▶ 27×27相性マトリクスにジャンプ</a>
+    </div>
+
+    <div class="relation-grid" id="relation-card-grid"></div>
+
+    <div class="table-wrap" id="table-relation">
+      <div class="table-title">📋 相性六分類 早見表 <span class="badge">必須早見表 6</span></div>
+      <div class="table-scroll">
+        <table id="relation-table" class="to-card wide">
+          <thead><tr><th>相性分類</th><th>意味</th><th>起きやすいこと</th><th>伸びる点</th><th>注意点</th><th>優しい鑑定表現</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="point-box">
+      <span class="tag">NG表現に注意</span>
+      <p>「この相性は悪いです」「別れた方がいい」とは言わず、「違いが出やすい関係です」「距離感を整えることが大切です」と伝えましょう。詳しくは巻末の<a href='/appendix#ng-section'>NG表現集</a>を参照してください。</p>
+    </div>
+
+    <div class="table-wrap" id="matrix-section">
+      <div class="table-title">🗂️ 27宿×27宿 相性マトリクス <span class="badge">必須早見表 7</span></div>
+      <p class="small-note">マス目をクリックすると、その組み合わせの相性タイプが表示されます。（行＝自分の宿番号、列＝相手の宿番号）</p>
+      <div class="matrix-legend" id="matrix-legend"></div>
+      <div id="matrix-wrap"></div>
+      <div class="result-box" id="matrix-result"></div>
+    </div>
+
+    <div class="tool-box">
+      <h4>💞 相性チェッカー（実践ワークスペース）</h4>
+      <p class="small-note">2人の誕生日を入力し、それぞれの本命宿を選ぶだけで、相性結果とChatGPT用プロンプトを即座に作れます。STEP3で登録した自分の情報は自動で入ります。</p>
+      <div class="form-row">
+        <div class="field"><label>1人目の誕生日</label><input type="date" id="checker-birth-a"></div>
+        <div class="field"><label>2人目の誕生日</label><input type="date" id="checker-birth-b"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>1人目の宿</label><select id="checker-a"></select></div>
+        <div class="field"><label>2人目の宿</label><select id="checker-b"></select></div>
+      </div>
+      <button class="btn" id="checker-submit">相性とプロンプトを作る</button>
+      <div class="result-box" id="checker-result"></div>
+      <div class="prompt-box generated-prompt" id="compatibility-prompt-box" hidden>
+        <div class="p-title">📋 ChatGPTプロンプト（相性鑑定用）</div>
+        <pre id="prompt-compatibility"></pre>
+        <button class="btn copy" data-copy="prompt-compatibility">📋 プロンプトをコピーする</button>
+      </div>
+    </div>
+
+    <div class="work-box">
+      <h4>ワークシート③：相性分析シート</h4>
+      <div class="field"><label>自分の宿</label><input type="text"></div>
+      <div class="field"><label>相手の宿</label><input type="text"></div>
+      <div class="field"><label>相性分類</label><input type="text" placeholder="相性チェッカーの結果を書きましょう"></div>
+      <div class="field"><label>この関係で意識したいこと</label><textarea rows="3"></textarea></div>
+    </div>
+
+    <div class="check-box">
+      <h4>暗記チェック</h4>
+      <div class="check-list">
+        <label><input type="checkbox" data-key="s5-1"> 相性六分類の名前を6つ言える</label>
+        <label><input type="checkbox" data-key="s5-2"> 「安壊」を不安をあおらずに説明できる</label>
+        <label><input type="checkbox" data-key="s5-3"> 相性チェッカーを使ってみた</label>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="step-pager no-print" aria-label="STEPページ移動"><a class='btn ghost' href='/step4'>← 前のページへ</a><a class='btn' href='/step6'>このSTEPを終えて次へ →</a></nav>
+</main>
+<footer>
+  <div class="container">
+    <p>完全版 7STEPで学ぶ 宿曜占星術入門講座</p>
+    <p class="small-note">本教材は学習・自己理解・エンタメ目的の実践教材です。断定的な判断や医療・金銭・恋愛成就の保証は行いません。宿の分類・相性の計算方式は流派により異なる場合があります。js/data.js にて自由に編集・カスタマイズできます。</p>
+  </div>
+</footer>
+<div class="jump-fab no-print">
+  <div class="jump-menu" id="jump-menu">
+    <a href='/step2#table-basic'>① 27宿基本早見表</a>
+    <a href='/step2#shuku-card-grid'>27宿SVGカード</a>
+    <a href='/step3'>② 本命宿フォーム</a>
+    <a href='/step4#table-detail'>③④⑤ 27宿詳細早見表</a>
+    <a href='/step5#table-relation'>⑥ 相性六分類早見表</a>
+    <a href='/step5#matrix-section'>⑦ 相性マトリクス</a>
+    <a href='/step6#table-day'>⑧ 日運11種早見表</a>
+    <a href='/appendix#ng-section'>⑨⑩ NG表現集・言い換え辞典</a>
+    <a href='/final'>最終課題</a>
+  </div>
+  <button class="jump-fab-btn" id="jump-fab-btn">📊 早見表へジャンプ</button>
+</div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
