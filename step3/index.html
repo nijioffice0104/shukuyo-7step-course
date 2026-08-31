@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STEP 3 本命宿を出す｜完全版 7STEPで学ぶ 宿曜占星術入門講座</title>
+<meta name="description" content="27宿・本命宿・相性六分類・日運をやさしく読み解き、鑑定文まで作る実践教材">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="bar">
+    <div class="logo">宿曜占星術 完全講座<small>7STEPでゼロから鑑定文まで</small></div>
+    <button class="nav-toggle" aria-label="メニュー">☰ 目次</button>
+    <nav class="site-nav">
+      <a href='/step1'>1.基本</a>
+      <a href='/step2'>2.27宿</a>
+      <a href='/step3'>3.本命宿</a>
+      <a href='/step4'>4.性格変換</a>
+      <a href='/step5'>5.相性</a>
+      <a href='/step6'>6.日運</a>
+      <a href='/step7'>7.鑑定文</a>
+      <a href='/appendix'>早見表</a>
+      <a href='/final'>最終課題</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="step" id="step3">
+  <div class="container">
+    <div class="step-head">
+      <span class="step-no">STEP 3</span>
+      <h2>本命宿を出す</h2>
+      <p class="lead">本命宿とは、生まれた時の月がどの宿にあったかを表す、あなたの性格・才能・相性の中心です。</p>
+    </div>
+
+    <div class="lecture">
+      <h3>本命宿の正確な算出について（大切なお願い）</h3>
+      <p>本命宿は、生まれた瞬間の<span class="mark">月の位置</span>によって決まります。月の動きは複雑で、正確に算出するには専用の暦（こよみ）データが必要です。誤差のある簡易計算で断定すると、間違った本命宿を伝えてしまう可能性があります。</p>
+      <p>そのため、この教材では<span class="mark2">「本命宿が分かっている方は手入力する」</span>方式を採用しています。まだ調べていない方は、宿曜占星術の専門書籍や信頼できる鑑定サービス・宿曜暦などで正確な本命宿を確認してから、下のフォームに入力してください。</p>
+    </div>
+
+    <div class="point-box">
+      <span class="tag">重要ポイント</span>
+      <p>「生年月日を入れたら自動で本命宿が出る」ような簡易ツールは、誤差によって間違った結果を表示してしまう可能性があるため、この教材ではあえて実装していません。正確性を最優先し、安全な設計にしています。</p>
+    </div>
+
+    <div class="tool-box">
+      <h4>🌙 本命宿 確認フォーム</h4>
+      <p class="small-note">生年月日を記録し、正確に確認した本命宿を選んでください。ここで選んだ内容はSTEP5・STEP7へ自動で引き継がれます。</p>
+      <div class="form-row">
+        <div class="field">
+          <label>生年月日</label>
+          <input type="date" id="honmei-birth">
+        </div>
+        <div class="field">
+          <label>本命宿を選択してください</label>
+          <select id="honmei-select"></select>
+        </div>
+      </div>
+      <button class="btn" id="honmei-submit">本命宿を確認する</button>
+      <div class="result-box" id="honmei-result"></div>
+    </div>
+
+    <div class="work-box">
+      <h4>ワークシート①：本命宿確認シート</h4>
+      <div class="field"><label>生年月日</label><input type="date"></div>
+      <div class="field"><label>調べた本命宿</label><input type="text" id="honmei-worksheet-name" placeholder="例：氐宿"></div>
+      <div class="field"><label>その宿のキーワードを書いてみよう</label><input type="text" placeholder="例：現実感・努力・粘り"></div>
+      <div class="field"><label>当てはまると感じた点</label><textarea rows="3" placeholder="性格・強み・注意点の中で、当てはまると思ったことを書きましょう"></textarea></div>
+      <div class="field"><label>3行鑑定文を作ってみよう</label><textarea rows="4" placeholder="①本質　②強み　③応援メッセージ　の3行で書いてみましょう"></textarea></div>
+    </div>
+
+    <div class="check-box">
+      <h4>暗記チェック</h4>
+      <div class="check-list">
+        <label><input type="checkbox" data-key="s3-1"> 本命宿は「生まれた時の月の位置」で決まると説明できる</label>
+        <label><input type="checkbox" data-key="s3-2"> 自分の本命宿を確認した（または確認する準備をした）</label>
+        <label><input type="checkbox" data-key="s3-3"> 簡易自動計算に頼らず、正確な情報で確認することの大切さを理解した</label>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="step-pager no-print" aria-label="STEPページ移動"><a class='btn ghost' href='/step2'>← 前のページへ</a><a class='btn' href='/step4'>このSTEPを終えて次へ →</a></nav>
+</main>
+<footer>
+  <div class="container">
+    <p>完全版 7STEPで学ぶ 宿曜占星術入門講座</p>
+    <p class="small-note">本教材は学習・自己理解・エンタメ目的の実践教材です。断定的な判断や医療・金銭・恋愛成就の保証は行いません。宿の分類・相性の計算方式は流派により異なる場合があります。js/data.js にて自由に編集・カスタマイズできます。</p>
+  </div>
+</footer>
+<div class="jump-fab no-print">
+  <div class="jump-menu" id="jump-menu">
+    <a href='/step2#table-basic'>① 27宿基本早見表</a>
+    <a href='/step2#shuku-card-grid'>27宿SVGカード</a>
+    <a href='/step3'>② 本命宿フォーム</a>
+    <a href='/step4#table-detail'>③④⑤ 27宿詳細早見表</a>
+    <a href='/step5#table-relation'>⑥ 相性六分類早見表</a>
+    <a href='/step5#matrix-section'>⑦ 相性マトリクス</a>
+    <a href='/step6#table-day'>⑧ 日運11種早見表</a>
+    <a href='/appendix#ng-section'>⑨⑩ NG表現集・言い換え辞典</a>
+    <a href='/final'>最終課題</a>
+  </div>
+  <button class="jump-fab-btn" id="jump-fab-btn">📊 早見表へジャンプ</button>
+</div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
